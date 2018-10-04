@@ -1,0 +1,10 @@
+Django
+django-extensions
+jupyter
+celery
+Pillow
+redis
+django-ckeditor
+django-ipware
+django-stdimage
+django-celery
