@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+#ignore all venvs(if they contain venv)
+*venv*
+
+#.idea
+.idea/
