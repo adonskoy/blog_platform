@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+</head>
+<body>
+<div>
+    <h1>{{ post.tittle }}</h1>
+    <p>Создано {{ post.date_published }}</p>
+    <p>Автор: {{ post.author }}</p>
+    <p>{{ post.content }} </p>
+</div>
+<div>
+    <ul>
+        {% for comment in comments %}
+            {% include "tree_view_template.html" %}
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>

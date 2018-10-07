@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feed</title>
+</head>
+<body>
+{% for post in posts %}
+    <div>
+        <h1>{{ post.tittle }} создано {{ post.date_published }} автор: {{ post.author }}</h1>
+        <p>{{ post.content|slice:":128" }} ...<a href="{{ post.get_absolute_url }}">Читать полностью</a></p>
+    </div>
+{% endfor %}
+
+</body>
+</html>

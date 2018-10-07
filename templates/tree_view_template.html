@@ -1,0 +1,12 @@
+<li>
+    {{ comment.text }}
+    {% if comment.has_childs %}
+        <ul>
+            {% for ch in comment.all_childs %}
+                {% with comment=ch template_name="tree_view_template.html" %}
+                    {% include template_name %}
+                {% endwith %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>
