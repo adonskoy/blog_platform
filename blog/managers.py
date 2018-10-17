@@ -13,4 +13,10 @@ class PostManager(models.Manager):
 
     def feed(self):
         posts = super().get_queryset().all()
+
+        return posts.order_by("-date_published")
+
+    def user_feed(self, user: get_user_model()):
+        posts = super().get_queryset().filter(author=user)
+
         return posts.order_by("-date_published")

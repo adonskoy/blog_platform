@@ -1,10 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponseNotFound
 from django.shortcuts import render
 from blog.models import Post, Comment
-
-
-# Create your views here.
 
 
 def feed(request):
@@ -20,7 +17,7 @@ def personal_feed(request):
 
 def post(request, pk):
     try:
-        post = Post.objects.get(pk=id)
+        post = Post.objects.get(pk=pk)
     except:
         return HttpResponseNotFound("404")
 
